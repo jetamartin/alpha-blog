@@ -1,0 +1,58 @@
+header {
+    position: relative;    
+}
+img {
+    width: 100%;
+    min-width: 300px;
+    max-height: 600px;
+}
+#welcome {
+    position: absolute;
+    margin: 1.5em;
+    top: 20px;
+    color: white;
+    background-color: teal;
+    border-radius: 5px;
+    padding: .25em;
+    font-style: italic;
+}
+secHeader {
+}
+section {
+    min-height: 10em;
+    background-color:aliceblue;
+    border: solid lightgray 1px;
+}
+#s1, #s2 {
+    float: left;
+    width: 49.8%;
+    color: teal;
+}
+h2 {
+    text-align: center;
+    color: teal;
+}
+p {
+    margin: 1.5em;
+}
+footer {
+    display: block;
+    padding-top: 1em;
+    clear: left;
+/*    margin: auto;*/
+    text-align: center;
+}
+.social-media {
+    display: inline-block;
+    background-color: teal;
+    padding: 1em;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    margin: .75em;
+}
+.fa {
+    color: white;
+}
+
