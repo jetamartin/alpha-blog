@@ -1,64 +1,82 @@
+// $navbar-default-bg: teal;
+
+
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.navbar{
+   background-color : #00b3b3;
+}
+// Change Navbar link to white
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
 
+// Sign-up button (Active)
+.btn-primary {
+    color: #fff;
+    background-color: #00b3b3;
+    border-color: #00b3b3;
+}
 
-header {
-    position: relative;    
+// Sign-up button (Hover)
+.btn-primary:hover, .btn-primary:active:hover {
+    color: #fff;
+    background-color:#009999;
+    border-color: #009999;
 }
-img {
-    width: 100%;
-    min-width: 300px;
-    max-height: 600px;
-}
-#welcome {
-    position: absolute;
-    margin: 1.5em;
-    top: 20px;
-    color: white;
-    background-color: teal;
-    border-radius: 5px;
-    padding: .25em;
-    font-style: italic;
-}
-secHeader {
-}
-section {
-    min-height: 10em;
-    background-color:aliceblue;
-    border: solid lightgray 1px;
-}
-#s1, #s2 {
+
+#logo {
     float: left;
-    width: 49.8%;
-    color: teal;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
 }
-h2 {
+#logo:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.center {
     text-align: center;
-    color: teal;
 }
-p {
-    margin: 1.5em;
+
+.jumbotron {
+    background-image: url("https://cdn.wallpapersafari.com/11/52/O3Mef2.jpg");
+    background-position:center;
+    // max-height: 550px;
+    height: 500px;
+    // background-size: contain;
+    background-size: 100% auto; 
+    background-repeat: no-repeat;
+}
+
+.jumbotron h1 {
+    text-align: center;
+    letter-spacing: -1px;
+    font-weight: bold;
+    // margin-top: 1.5em;
 }
 footer {
-    display: block;
-    padding-top: 1em;
-    clear: left;
-/*    margin: auto;*/
-    text-align: center;
+    margin-top: 2em;
+    padding-top: .5em;
+    border-top: 1px solid #008080;
+    color: #008080;
 }
-.social-media {
-    display: inline-block;
-    background-color: teal;
-    padding: 1em;
-    width: 2em;
-    height: 2em;
-    border-radius: 50%;
-    text-align: center;
-    margin: .75em;
+footer a:hover {
+    color: #004d4d;
 }
-.fa {
-    color: white;
+footer small {
+    float: left;
 }
 
+footer ul {
+    float: right;
+    list-style: none;
+}
+footer ul li {
+    float: left;
+    margin-left: 15px;
+}
