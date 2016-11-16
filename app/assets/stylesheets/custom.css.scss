@@ -63,7 +63,9 @@
     font-weight: bold;
     // margin-top: 1.5em;
 }
-
+.index-title {
+    padding-left: 1em;
+}
 .article-actions {
     border-top: 1px solid #eaeaea;
     padding-top: 5px;
@@ -71,9 +73,17 @@
 .description {
     margin-top: 0;
 }
-
-
-
+.article-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    
+}
+.article-body {
+    border-top: 1px solid #eaeaea;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
 
 footer {
     margin-top: 2em;
