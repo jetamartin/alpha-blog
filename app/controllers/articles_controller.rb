@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  # Eliminate code redundancy by setting article in a common method
   before_action :set_article, only: [:edit, :update, :show, :destroy]
   # Enforces that you Must be logged to perform certain actions
   before_action :require_user, except: [:index, :show ]
