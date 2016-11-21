@@ -1,9 +1,9 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show, :destroy]
   # Enforces that you Must be logged to perform certain actions
-  # before_action :require_user, except: [:index, :show ]
+  before_action :require_user, except: [:index, :show ]
   # Enforces that you must be the author to perform certain actions
-  # before_action :require_same_user, only: [ :edit, :update, :destroy]
+  before_action :require_same_user, only: [ :edit, :update, :destroy]
    
   def index
     @articles = Article.paginate(page: params[:page], per_page: 5)
@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
   
   def create
     @article = Article.new(article_params)
-    @article.user = User.first
+    @article.user = current_user
     if @article.save
       flash[:success] = "Article was successfully created"
       redirect_to article_path(@article)
