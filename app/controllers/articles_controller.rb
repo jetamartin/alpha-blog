@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
-  # Eliminate code redundancy by setting article in a common method
-  # before_action :set_article, only: [:edit, :update, :show, :destroy]
+  before_action :set_article, only: [:edit, :update, :show, :destroy]
   # Enforces that you Must be logged to perform certain actions
   # before_action :require_user, except: [:index, :show ]
   # Enforces that you must be the author to perform certain actions
@@ -16,7 +15,7 @@ class ArticlesController < ApplicationController
   
   def create
     @article = Article.new(article_params)
-    @article.user = current_user
+    @article.user = User.first
     if @article.save
       flash[:success] = "Article was successfully created"
       redirect_to article_path(@article)
@@ -56,7 +55,7 @@ class ArticlesController < ApplicationController
   def require_same_user
     if current_user != @article.user
       flash[:danger] = "you can only edit or delete your articles"
-      redirect_to root_path
+      redirect_to ROOT_PATH 
     end
   end
 end
