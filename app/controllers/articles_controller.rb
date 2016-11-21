@@ -1,10 +1,10 @@
 class ArticlesController < ApplicationController
   # Eliminate code redundancy by setting article in a common method
-  before_action :set_article, only: [:edit, :update, :show, :destroy]
+  # before_action :set_article, only: [:edit, :update, :show, :destroy]
   # Enforces that you Must be logged to perform certain actions
-  before_action :require_user, except: [:index, :show ]
+  # before_action :require_user, except: [:index, :show ]
   # Enforces that you must be the author to perform certain actions
-  before_action :require_same_user, only: [ :edit, :update, :destroy]
+  # before_action :require_same_user, only: [ :edit, :update, :destroy]
    
   def index
     @articles = Article.paginate(page: params[:page], per_page: 5)
