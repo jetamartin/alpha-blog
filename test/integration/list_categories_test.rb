@@ -3,7 +3,6 @@ class ListCategoriesTest < ActionDispatch::IntegrationTest
   def setup
     @category = Category.create(name: "book")
     @category2 = Category.create(name: "programming")
-    # debugger
   end
 
   test 'should show categories listing' do
