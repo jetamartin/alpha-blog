@@ -75,6 +75,11 @@
     border-top: 1px solid #eaeaea;
     padding-top: 5px;
 }
+// Allows checkboxes to better align with labels (Articles form)
+// .form-horizontal .checkbox {
+//     min-height: 20px;
+// }
+
 .description {
     margin-top: 0;
 }
@@ -92,7 +97,23 @@
     list-style: none;
     padding-left: 0;
 }
+// Or use a grey for background color #d9d9d9
+.badge {
+    background-color: #CEF6F5;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+// Needed to ensure that checkboxes on Widows systems is styled correctly
+// Note: I didn't see any difference in styling with or without this. 
+.input_checkbox input {
+    width: auto !important;
+}
 
+// Allows checkboxes to better align with labels (Articles form)
+.form-horizontal .checkbox {
+    min-height: 20px;
+}
 footer {
     margin-top: 2em;
     padding-top: .5em;

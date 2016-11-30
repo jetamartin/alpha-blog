@@ -21,7 +21,10 @@ class CategoriesController < ApplicationController
   end
   
   def show
-    
+    # Next two lines added to allow all articles with an assigned category to be shown
+    # when view a category page
+    @category = Category.find(params[:id])
+    @category_articles = @category.articles.paginate(page: params[:page], per_page: 2)
   end
   
   def edit

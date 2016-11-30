@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="center">
+    <h1 class="index-title"><%= "Category: "+ @category.name %></h1>
+  </div>
+</div>
+<div align="center">
+  <%= will_paginate @category_articles %>
+</div>
+<% if !@category_articles.any? %>
+  <p class="lead center">There are no articles currently in this category</p>
+  <% if logged_in? %>
+    <p class=center><%= link_to "Add article?", new_article_path %> </p>
+  <% end %>
+<% end %>
+<%= render 'articles/article', obj: @category_articles %>
+<div align="center">
+  <%= will_paginate @category_articles %>
+</div>
