@@ -6,7 +6,7 @@
 <div align="center">
   <%= will_paginate %>
 </div>
-<% if categories.any? %>
+<% if @categories.any? %>
   <% @categories.each do |category| %>
     <ul class="listing">
       <div class="row">
@@ -18,7 +18,8 @@
         </div>
       </div>
     </ul>
-<% else %>
+  <% end %>
+% else %>
   <div class="center">
       <p>There are no categories currently defined</p>
   </div>
