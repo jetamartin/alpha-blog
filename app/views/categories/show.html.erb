@@ -3,16 +3,32 @@
     <h1 class="index-title"><%= "Category: "+ @category.name %></h1>
   </div>
 </div>
-<div align="center">
-  <%= will_paginate @category_articles %>
+
+<div class="container center">
+  <% if logged_in? && current_user.admin? %>
+  <div class="row">
+    <!--<span class="badge"><%#=link_to "Edit Category Name", edit_category_path(@category) %></span>-->
+    <%= link_to "Edit Category Name", edit_category_path(@category), 
+        class: "btn btn-xs btn-primary" %>
+    <br></br>
+  </div>
+  <% end %>
+  <div class="row">
+    <%= will_paginate @category_articles %>
+  </div>
+  
 </div>
+
 <% if !@category_articles.any? %>
   <p class="lead center">There are no articles currently in this category</p>
   <% if logged_in? %>
     <p class=center><%= link_to "Add article?", new_article_path %> </p>
   <% end %>
 <% end %>
-<%= render 'articles/article', obj: @category_articles %>
+<div class ="row">
+  <%= render 'articles/article', obj: @category_articles %>
+</div>
+
 <div align="center">
   <%= will_paginate @category_articles %>
 </div>
