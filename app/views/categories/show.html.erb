@@ -22,7 +22,9 @@
 <% if !@category_articles.any? %>
   <p class="lead center">There are no articles currently in this category</p>
   <% if logged_in? %>
-    <p class=center><%= link_to "Add article?", new_article_path %> </p>
+    <div class="center">
+      <p class="badge"><%= link_to "Add new article in this category?", new_article_path %> </p> 
+    </div>
   <% end %>
 <% end %>
 <div class ="row">
