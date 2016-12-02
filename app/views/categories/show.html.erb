@@ -18,12 +18,13 @@
   </div>
   
 </div>
-
 <% if !@category_articles.any? %>
-  <p class="lead center">There are no articles currently in this category</p>
-  <%# if logged_in? %>
-    <!--<p class="badge"><%= link_to "Add new article for category?", new_article_path %> </p>-->
-  <%# end %>
+  <p class="lead center">No articles exist in this category yet</p>
+  <% if logged_in? %>
+    <div class="center">
+      <p class="badge"><%= link_to "Create new article for this category?", new_article_path %> </p>
+    </div>
+  <% end %>
 <% end %>
 <div class ="row">
   <%= render 'articles/article', obj: @category_articles %>
