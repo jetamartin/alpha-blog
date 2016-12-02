@@ -26,6 +26,17 @@
     background-color:#009999;
     border-color: #009999;
 }
+a {
+    color: #009999;
+}
+.pagination > li > a {
+    color: #009999;
+}
+.pagination>.active>a,
+.pagination>.active>a:hover{
+    background-color: #00b3b3;
+    border-color:#00b3b3;
+}
 
 #logo {
     float: left;
@@ -99,7 +110,7 @@
 }
 // Or use a grey for background color #d9d9d9
 .badge {
-    background-color: #CEF6F5;
+    background-color: #ccffee;
     text-transform: uppercase;
     letter-spacing: -1px;
     font-weight: bold;

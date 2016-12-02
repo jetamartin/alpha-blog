@@ -19,7 +19,14 @@
 <div class="center">
   <%= will_paginate @user_articles %>
 </div>
-<%= render 'articles/article', obj: @user_articles %>
-<div class="center">
-  <%= will_paginate @user_articles %>
-</div>
+<% if @user_articles.any? %>
+  <%= render 'articles/article', obj: @user_articles %>
+  <div class="center">
+    <%= will_paginate @user_articles %>
+  </div>
+<% else %>
+  <div class="center lead">
+    <p>This user currently has no articles</p>
+  </div>
+<% end %>
+
