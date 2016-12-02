@@ -6,7 +6,10 @@
 <div align="center">
   <%= will_paginate %>
 </div>
-<% if @categories.any? %>
+<%# debugger %>
+<% a = false %>
+<% if a %>
+<%# if @categories.any? %>
   <% @categories.each do |category| %>
     <ul class="listing">
       <div class="row">
@@ -19,8 +22,8 @@
       </div>
     </ul>
   <% end %>
-% else %>
-  <div class="center">
+<% else %>
+  <div class="center lead">
       <p>There are no categories currently defined at this time</p>
   </div>
 <% end %>
